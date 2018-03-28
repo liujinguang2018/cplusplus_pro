@@ -1,3 +1,5 @@
 
 
-add_subdirectory(boost)
+#add_subdirectory(boost)
+
+add_subdirectory(stl)
