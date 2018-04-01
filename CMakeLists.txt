@@ -1,30 +1,26 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.0)
 
 project(cplusplus_pro)
 
+MESSAGE(STATUS "==============================")
 
-include_directories("D:/common-libs/boost_1_65_1")
+MESSAGE(STATUS "Operation System is ${CMAKE_SYSTEM}")
 
-link_directories("D:/common-libs/boost_1_65_1/lib64-msvc-12.0")
+IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+	MESSAGE(STATUS "current platform: Windows")  
+	set(CMAKE_CXX_FLAGS "/EHsc ${CMAKE_CXX_FLAGS}")
 
-#find_library(LIBBOOST_THREAD_PATH boost_thread-vc120-mt-1_65_1 D:/common-libs/boost_1_65_1/lib64-msvc-12.0)
-#IF(NOT LIBBOOST_THREAD_PATH)
-#    MESSAGE(FATAL_ERROR "boost_thread lib not found")
-#ENDIF(NOT LIBBOOST_THREAD_PATH)
-
-#find_library(LIBBOOST_TIMER_PATH boost_timer-vc120-mt-1_65_1 D:/common-libs/boost_1_65_1/lib64-msvc-12.0)
-#IF(NOT LIBBOOST_TIMER_PATH)
-#    MESSAGE(FATAL_ERROR "boost_timer lib not found")
-#ENDIF(NOT LIBBOOST_TIMER_PATH)
-
-#find_library(LIBBOOST_DATE_TIME_PATH boost_date_time-vc120-mt-1_65_1 D:/common-libs/boost_1_65_1/lib64-msvc-12.0)
-#IF(NOT LIBBOOST_DATE_TIME_PATH)
-#    MESSAGE(FATAL_ERROR "boost_date_time lib not found")
-#ENDIF(NOT LIBBOOST_DATE_TIME_PATH)
-
-set(CMAKE_CXX_FLAGS "/EHsc ${CMAKE_CXX_FLAGS}")
-
-set(BUILD_USE_64BITS on)
+	set(BUILD_USE_64BITS on)
+	
+	include_directories("D:/common-libs/boost_1_65_1")
+	link_directories("D:/common-libs/boost_1_65_1/lib64-msvc-12.0")	
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "CYGWIN")
+	MESSAGE(STATUS "current platform: cygwin")  
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+	MESSAGE(STATUS "current platform: Linux")  	
+ELSE ()
+	MESSAGE(STATUS "current platform: UNIX")  
+ENDIF (CMAKE_SYSTEM_NAME MATCHES "Windows")
 
 add_subdirectory(src)
 
