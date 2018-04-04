@@ -1,45 +1,53 @@
 #include <boost/shared_ptr.hpp>
 #include <cassert>
 #include <iostream>
+#include <assert.h>
 
-class A
+class Shared
 {
     boost::shared_ptr<int> no_;
 
   public:
-    A(boost::shared_ptr<int> no) : no_(no) {}
+    Shared(boost::shared_ptr<int> no) : no_(no) {}
 
-    void value(int i)
+    void set(int i)
     {
         *no_ = i;
     }
-};
 
-class B
-{
-    boost::shared_ptr<int> no_;
-
-  public:
-    B(boost::shared_ptr<int> no) : no_(no) {}
-    int value() const
+    int get()
     {
         return *no_;
     }
+
+    void print()
+    {
+        std::cout << "count: " << no_.use_count() << ", value=" << *no_ << std::endl;
+    }
 };
+
+void print_func(boost::shared_ptr<int> p)
+{
+    std::cout << "count: " << p.use_count() << ", value=" << *p << std::endl;
+}
 
 int main()
 {
     boost::shared_ptr<int> temp(new int(4));
-    A a(temp);
-    B b(temp);
+    Shared a(temp);
+    Shared b(temp);
 
+    a.print();
     assert(temp.use_count() == 3);
 
-    std::cout << b.value() << std::endl;
-    assert(b.value() == 4);
+    std::cout << b.get() << std::endl;
+    assert(b.get() == 4);
 
-    a.value(28);
-    assert(b.value() == 28);
+    a.set(28);
+    assert(b.get() == 28);
+    b.print();
+    print_func(temp);
+    b.print();
 
     return 0;
 }

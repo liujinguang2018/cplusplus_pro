@@ -1,4 +1,4 @@
-#include <string>
+ï»¿#include <string>
 #include <iostream>
 #include <boost/scoped_ptr.hpp>
 
@@ -19,8 +19,8 @@ void test_scoped_ptr() {
     std::cout << *p << std::endl;    
 }
 
-//scoped_ptrºÍauto_ptrÖ®¼äµÄÖ÷ÒªÇø±ğÔÚÓÚËüÃÇ¶ÔËùÓĞÈ¨µÄ´¦Àí·½Ê½ÉÏ:
-//auto_ptrÔÚ¸´ÖÆÊ±»áÊ¹Ô´auto_ptr×Ô¶¯½»³öËùÓĞÈ¨£¬¶øscoped_ptrÔò²»ÔÊĞí¸´ÖÆ
+//scoped_ptrå’Œauto_pträ¹‹é—´çš„ä¸»è¦åŒºåˆ«åœ¨äºå®ƒä»¬å¯¹æ‰€æœ‰æƒçš„å¤„ç†æ–¹å¼ä¸Š:
+//auto_ptråœ¨å¤åˆ¶æ—¶ä¼šä½¿æºauto_ptrè‡ªåŠ¨äº¤å‡ºæ‰€æœ‰æƒï¼Œè€Œscoped_ptråˆ™ä¸å…è®¸å¤åˆ¶
 void scoped_vs_auto() {
     boost::scoped_ptr<std::string> p_scoped(new std::string("Hello"));
     std::auto_ptr<std::string> p_auto(new std::string("Hello"));
@@ -28,10 +28,10 @@ void scoped_vs_auto() {
     std::cout << "scoped size = " << p_scoped->size() << std::endl;
     std::cout << "auto size = " << p_auto->size() << std::endl;
 
-    //scoped_ptr²»ÄÜÍ¨¹ı¸³ÖµÀ´¹¹Ôì»òÕß¸³Öµ
+    //scoped_pträ¸èƒ½é€šè¿‡èµ‹å€¼æ¥æ„é€ æˆ–è€…èµ‹å€¼
     //boost::scoped_ptr<std::string> p_another_scoped = p_scoped;
 
-    //ËùÓĞÈ¨×ªÒÆ
+    //æ‰€æœ‰æƒè½¬ç§»
     std::auto_ptr<std::string> p_another_auto = p_auto;
     std::cout << "auto size = " << p_another_auto->size() << std::endl;
 

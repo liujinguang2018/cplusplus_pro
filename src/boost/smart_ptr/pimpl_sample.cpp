@@ -1,27 +1,33 @@
-#include "pimpl_sample.hpp"
+ï»¿#include "pimpl_sample.hpp"
 #include <string>
 #include <iostream>
 
-struct impl {
-    void do_something() {
+class pimpl_sample::impl
+{
+  public:
+    impl(std::string s) : s_(s) {}
+    void do_something()
+    {
         std::cout << s_ << std::endl;
     }
 
+  private:
     std::string s_;
 };
 
-//pimpl_sampleÀàµÄ¹¹Ôìº¯ÊýÔÚ¹¹ÔìÁËpimplÖ®ºó¿ÉÄÜ»áÅ×³öÒ»¸öÒì³£
-//ÔÚ¹¹Ôìº¯ÊýÖÐÅ×³öÒì³£ÒâÎ¶×Å¹¹Ôì¶ÔÏó²¢Ã»ÓÐÕæÕý´æÔÚ£¬Òò´ËÔÚÕ»Õ¹¿ª
-//Ê±£¬½«²»»áµ÷ÓÃËüµÄ¹»×Åº¯Êý¡£Õâ¾ÍËµÃ÷ÓÐimpl_Ö¸Õë·ÖÅä²¢ÒýÆðµÄÄÚ´æ
-//½«»áÐ¹Â¶
-pimpl_sample::pimpl_sample() : pimpl_(new impl) {
-    pimpl_->s_ = "This is the pimpl idiom";
+//pimpl_sampleç±»çš„æž„é€ å‡½æ•°åœ¨æž„é€ äº†pimplä¹‹åŽå¯èƒ½ä¼šæŠ›å‡ºä¸€ä¸ªå¼‚å¸¸
+//åœ¨æž„é€ å‡½æ•°ä¸­æŠ›å‡ºå¼‚å¸¸æ„å‘³ç€æž„é€ å¯¹è±¡å¹¶æ²¡æœ‰çœŸæ­£å­˜åœ¨ï¼Œå› æ­¤åœ¨æ ˆå±•å¼€
+//æ—¶ï¼Œå°†ä¸ä¼šè°ƒç”¨å®ƒçš„å¤Ÿç€å‡½æ•°ã€‚è¿™å°±è¯´æ˜Žæœ‰impl_æŒ‡é’ˆåˆ†é…å¹¶å¼•èµ·çš„å†…å­˜
+//å°†ä¼šæ³„éœ²
+pimpl_sample::pimpl_sample(std::string s) : pimpl_(new impl(s))
+{
 }
 
-pimpl_sample::~pimpl_sample() {
-    delete pimpl_;
+pimpl_sample::~pimpl_sample()
+{
 }
 
-void pimpl_sample::do_something() {
+void pimpl_sample::do_something()
+{
     pimpl_->do_something();
 }
