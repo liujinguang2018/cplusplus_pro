@@ -1,4 +1,4 @@
-#include <boost/timer.hpp>
+ï»¿#include <boost/timer.hpp>
 #include <boost/thread.hpp>
 #include <iostream>
 
@@ -9,16 +9,16 @@ int main(int argc, char *argv[])
 {
     timer t;
 
-    //¿É¶ÈÁ¿µÄ×î´óÊ±¼ä
+    //å¯åº¦é‡çš„æœ€å¤§æ—¶é—´
     cout << "max time span: " << t.elapsed_max() / 3600 << "h" << endl;
 
     //boost::thread::sleep(boost::posix_time::seconds(5) + boost::get_system_time());
     boost::this_thread::sleep(boost::posix_time::seconds(2));
 
-    //¿É¶ÈÁ¿µÄ×îĞ¡Ê±¼ä
+    //å¯åº¦é‡çš„æœ€å°æ—¶é—´
     cout << "min time span: " << t.elapsed_min() << "S" << endl;
 
-    //Êä³öÒÑ¾­Á÷ÊÅµÄÊ±¼ä
+    //è¾“å‡ºå·²ç»æµé€çš„æ—¶é—´
     cout << "now time elapsed:" << t.elapsed() << "s" << endl;
 
     return 0;

@@ -12,3 +12,6 @@ install(TARGETS test_bind DESTINATION boost)
 
 add_executable(test_bind2 test_bind2.cpp)
 install(TARGETS test_bind2 DESTINATION boost)
+
+add_executable(test_bind3 test_bind3.cpp)
+install(TARGETS test_bind3 DESTINATION boost)
