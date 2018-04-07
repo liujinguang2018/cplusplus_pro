@@ -35,3 +35,24 @@ install(TARGETS alg_find_end_test DESTINATION stl)
 
 add_executable(alg_search_n_test alg_search_n_test.cpp)
 install(TARGETS alg_search_n_test DESTINATION stl)
+
+add_executable(alg_count_test alg_count_test.cpp)
+install(TARGETS alg_count_test DESTINATION stl)
+
+add_executable(func_plus_minus_test func_plus_minus_test.cpp)
+install(TARGETS func_plus_minus_test DESTINATION stl)
+
+add_executable(alg_for_each_test alg_for_each_test.cpp)
+install(TARGETS alg_for_each_test DESTINATION stl)
+
+add_executable(alg_equal_test alg_equal_test.cpp)
+install(TARGETS alg_equal_test DESTINATION stl)
+
+add_executable(alg_mismatch_test alg_mismatch_test.cpp)
+install(TARGETS alg_mismatch_test DESTINATION stl)
+
+add_executable(alg_lexicographical_compare_test alg_lexicographical_compare_test.cpp)
+install(TARGETS alg_lexicographical_compare_test DESTINATION stl)
+
+add_executable(alg_min_max_test alg_min_max_test.cpp)
+install(TARGETS alg_min_max_test DESTINATION stl)
