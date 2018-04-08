@@ -56,3 +56,21 @@ install(TARGETS alg_lexicographical_compare_test DESTINATION stl)
 
 add_executable(alg_min_max_test alg_min_max_test.cpp)
 install(TARGETS alg_min_max_test DESTINATION stl)
+
+add_executable(alg_copy_test alg_copy_test.cpp)
+install(TARGETS alg_copy_test DESTINATION stl)
+
+add_executable(alg_copy_backward_test alg_copy_backward_test.cpp)
+install(TARGETS alg_copy_backward_test DESTINATION stl)
+
+add_executable(alg_swap_test alg_swap_test.cpp)
+install(TARGETS alg_swap_test DESTINATION stl)
+
+add_executable(alg_swap_range_test alg_swap_range_test.cpp)
+install(TARGETS alg_swap_range_test DESTINATION stl)
+
+add_executable(alg_transform_test alg_transform_test.cpp)
+install(TARGETS alg_transform_test DESTINATION stl)
+
+add_executable(alg_replace_test alg_replace_test.cpp)
+install(TARGETS alg_replace_test DESTINATION stl)
