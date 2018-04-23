@@ -1,0 +1,17 @@
+add_executable(default_constructor_test01 default_constructor_test01.cpp)
+install(TARGETS default_constructor_test01 DESTINATION inside-object-model)
+
+
+add_executable(default_constructor_test02 default_constructor_test02.cpp)
+install(TARGETS default_constructor_test02 DESTINATION inside-object-model)
+
+
+add_executable(copy_constructor_test01 copy_constructor_test01.cpp)
+install(TARGETS copy_constructor_test01 DESTINATION inside-object-model)
+
+add_executable(member_initialization_list_test member_initialization_list_test.cpp)
+install(TARGETS member_initialization_list_test DESTINATION inside-object-model)
+
+add_executable(data_semantics_test01 data_semantics_test01.cpp)
+install(TARGETS data_semantics_test01 DESTINATION inside-object-model)
+

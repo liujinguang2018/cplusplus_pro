@@ -1,11 +1,11 @@
 add_executable(lambda_test lambda_test.cpp)
 install(TARGETS lambda_test DESTINATION c++11)
 
-#add_executable(scoped_array_test scoped_array_test.cpp)
-#install(TARGETS scoped_array_test DESTINATION boost)
+add_executable(thread_local_test thread_local_test.cpp)
+install(TARGETS thread_local_test DESTINATION c++11)
 
-#add_executable(unique_ptr_test unique_ptr_test.cpp)
-#install(TARGETS unique_ptr_test DESTINATION boost)
+add_executable(generic_progamming_test generic_progamming_test.cpp)
+install(TARGETS generic_progamming_test DESTINATION c++11)
 
 #add_executable(shared_ptr_test shared_ptr_test.cpp)
 #install(TARGETS shared_ptr_test DESTINATION boost)
