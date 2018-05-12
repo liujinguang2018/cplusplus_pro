@@ -1,0 +1,14 @@
+add_executable(rtti_test rtti_test.cpp)
+install(TARGETS rtti_test DESTINATION interview)
+
+add_executable(sliced_object_test sliced_object_test.cpp)
+install(TARGETS sliced_object_test DESTINATION interview)
+
+add_executable(multiple_inheritance_test multiple_inheritance_test.cpp)
+install(TARGETS multiple_inheritance_test DESTINATION interview)
+
+add_executable(multiple_inheritance_test1 multiple_inheritance_test1.cpp)
+install(TARGETS multiple_inheritance_test1 DESTINATION interview)
+
+add_executable(multiple_inheritance_test2 multiple_inheritance_test2.cpp)
+install(TARGETS multiple_inheritance_test2 DESTINATION interview)

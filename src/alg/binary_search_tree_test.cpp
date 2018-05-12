@@ -31,9 +31,25 @@ int main()
 
     constructTree(tree);
 
-    cout << "inorder: "; 
+    cout << "inorder: " << endl;
     tree.inorder();
     cout << endl;
+    tree.iterativePreorder();
+    cout << endl;
 
+    cout << "preorder: " << endl;
+    tree.preorder();
+    cout << endl;    
+    tree.iterativePreorder();
+    cout << endl;
+
+    cout << "postorder: " << endl; 
+    tree.postorder();
+    cout << endl;     
+    tree.iterativePostorder();
+    cout << endl;         
+
+    cout << "breadthFirst: "; 
     tree.breadthFirst();
+    cout << endl;
 } 

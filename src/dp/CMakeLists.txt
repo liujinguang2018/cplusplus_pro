@@ -6,4 +6,8 @@ add_subdirectory(abstract-factory)
 
 add_subdirectory(singleton)
 
-#add_subdirectory(func)
+add_subdirectory(bridge)
+
+add_subdirectory(adapter)
+
+add_subdirectory(decorator)

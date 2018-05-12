@@ -33,7 +33,7 @@ void IntSLList::addToTail(int val)
     }
     else
     {
-        head = tail;
+        head = tail = new IntSLLNode(val);
     }
 }
 
