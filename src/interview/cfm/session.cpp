@@ -24,7 +24,7 @@ void Session::fill_with_talk(vector<shared_ptr<Talk>> &talks)
         }
         else
         {
-            break;
+           ++iter;
         }
     }
 }

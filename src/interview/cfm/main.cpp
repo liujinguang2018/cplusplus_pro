@@ -45,43 +45,6 @@ int main(int argc, char *argv[])
 
     cout << "=====Scheduling Result=======" << endl;
     conference->output_result();
-    // string s1 = "Writing Fast Tests Against Enterprise Rails 60min";
-    // string s2 = "Rails for Python Developers lightning";
-    // string s3 = "Rails for Python expert";
-    // regex reg("([0-9]+)min|lightning");
-    // smatch sm;
-    // cout << boolalpha << regex_search(s1, sm, reg) << endl;
-    // cout << sm.str(0) << endl;
-    // cout << sm.str(1) << endl;
-    // cout << sm.str(2) << endl;
-    // cout << boolalpha << regex_search(s2, sm, reg) << endl;
-    // cout << sm.str() << endl;
-    // cout << boolalpha << regex_search(s3, sm, reg) << endl;
-    // cout << sm.str() << endl;
-
-    // vector<string> s;
-    // s.push_back("Hello");
-    // s.push_back("world");
-    // s.push_back("Beijing");
-    // s.push_back("changping");
-
-    // for (vector<string>::iterator iter = s.begin(); iter != s.end(); ++iter)
-    // {
-    //     cout << *iter << endl;
-    //     if ((*iter).compare("Beijing") == 0)
-    //     {
-    //         iter = s.erase(iter);
-    //     }
-    // }
-
-    // cout << endl;
-    // for (vector<string>::iterator iter = s.begin(); iter != s.end(); ++iter)
-    // {
-    //     cout << *iter << endl;
-    //     // if ((*iter).compare("Beijing") == 0) {
-    //     //     iter = s.erase(iter);
-    //     // }
-    // }
 
     return 0;
 }

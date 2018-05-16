@@ -22,6 +22,11 @@
     的对象提供创建接口，而Factory模式正如我在相应的文档中分析的是为一类对象提供
     创建接口或延迟对象的创建到子类中实现。并且可以看到，AbstractFactory模式通
     常都是使用Factory模式实现（ConcreteFactory1）。
+1.3 Singleton模式
+    Singleton模式经常和Factory(AbstractFactory)模式一起使用，因为系统中工厂对象
+    一般来说只有一个。
+1.4 Builder模式
+    
 
 
 2. 结构型(structural)模式

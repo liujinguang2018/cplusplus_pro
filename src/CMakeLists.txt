@@ -17,6 +17,6 @@ add_subdirectory(interview)
 
 #add_subdirectory(gtest)
 
-#add_subdirectory(alg)
+add_subdirectory(alg)
 
 #add_subdirectory(dp)

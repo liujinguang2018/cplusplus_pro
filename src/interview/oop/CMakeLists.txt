@@ -12,3 +12,9 @@ install(TARGETS multiple_inheritance_test1 DESTINATION interview)
 
 add_executable(multiple_inheritance_test2 multiple_inheritance_test2.cpp)
 install(TARGETS multiple_inheritance_test2 DESTINATION interview)
+
+add_executable(virutal_function_test virutal_function_test.cpp)
+install(TARGETS virutal_function_test DESTINATION interview)
+
+add_executable(virutal_function_test1 virutal_function_test1.cpp)
+install(TARGETS virutal_function_test1 DESTINATION interview)

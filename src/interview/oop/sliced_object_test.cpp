@@ -13,7 +13,7 @@ class Base
         cout << "Base::DoNothing(); b=" << b << endl;
     }
 
-  private:
+  //protected:
     unsigned int b;
 };
 
@@ -26,7 +26,7 @@ class Derived : public Base
     }
     virtual void DoNothing()
     {
-        cout << "Derived::DoNothing(); d=" << d << endl;
+        cout << "Derived::DoNothing(); d=" << d << ", b=" << b << endl;
     }
 
   private:
@@ -37,7 +37,8 @@ void DoSomething1(Base barr[], int size)
 {
     for (int i = 0; i < size; i++)
     {
-        barr[0].DoNothing();
+        //barr[i].DoNothing();
+        cout << barr[i].b << ", " << sizeof(barr[i]) << endl;
     }
 }
 

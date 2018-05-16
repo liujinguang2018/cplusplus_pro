@@ -5,6 +5,9 @@ target_link_libraries(sll_test ${GTEST_LIB})
 add_executable(binary_search_tree  binary_search_tree_test.cpp)
 install(TARGETS binary_search_tree DESTINATION alg)
 
+add_executable(sort_test  sort_test.cpp)
+install(TARGETS sort_test DESTINATION alg)
+
 
 #add_executable(thread_local_test thread_local_test.cpp)
 #install(TARGETS thread_local_test DESTINATION c++11)
