@@ -20,7 +20,7 @@ class Singleton
       public:
         ~GC()
         {
-            cout << "GC()" << endl;
+            cout << "~GC()" << endl;
             if (instance_)
             {
                 cout << "delete instance" << endl;

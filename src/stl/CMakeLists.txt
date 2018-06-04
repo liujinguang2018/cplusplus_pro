@@ -74,3 +74,36 @@ install(TARGETS alg_transform_test DESTINATION stl)
 
 add_executable(alg_replace_test alg_replace_test.cpp)
 install(TARGETS alg_replace_test DESTINATION stl)
+
+add_executable(gp_constant_test gp_constant_test.cpp)
+install(TARGETS gp_constant_test DESTINATION stl)
+
+add_executable(container_vector_test container_vector_test.cpp)
+install(TARGETS container_vector_test DESTINATION stl)
+
+add_executable(container_list_test container_list_test.cpp)
+install(TARGETS container_list_test DESTINATION stl)
+
+add_executable(container_deque_test container_deque_test.cpp)
+install(TARGETS container_deque_test DESTINATION stl)
+
+add_executable(container_set_test container_set_test.cpp)
+install(TARGETS container_set_test DESTINATION stl)
+
+add_executable(container_multiset_test container_multiset_test.cpp)
+install(TARGETS container_multiset_test DESTINATION stl)
+
+add_executable(container_map_test container_map_test.cpp)
+install(TARGETS container_map_test DESTINATION stl)
+
+add_executable(container_multimap_test container_multimap_test.cpp)
+install(TARGETS container_multimap_test DESTINATION stl)
+
+add_executable(container_stack_test container_stack_test.cpp)
+install(TARGETS container_stack_test DESTINATION stl)
+
+add_executable(container_queue_test container_queue_test.cpp)
+install(TARGETS container_queue_test DESTINATION stl)
+
+add_executable(container_priority_queue_test container_priority_queue_test.cpp)
+install(TARGETS container_priority_queue_test DESTINATION stl)

@@ -8,6 +8,8 @@ install(TARGETS binary_search_tree DESTINATION alg)
 add_executable(sort_test  sort_test.cpp)
 install(TARGETS sort_test DESTINATION alg)
 
+add_executable(reverse  reverse.cpp)
+install(TARGETS reverse DESTINATION alg)
 
 #add_executable(thread_local_test thread_local_test.cpp)
 #install(TARGETS thread_local_test DESTINATION c++11)

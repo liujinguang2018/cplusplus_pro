@@ -67,13 +67,6 @@ void insert_sort(T data[], int n)
             data[j] = data[j - 1];
         }
         data[j] = tmp;
-        // for (int j = 0; j < i; ++j) {
-        //     if (data[j] > data[i]) {
-        //         T tmp = data[j];
-        //         data[j] = data[i];
-        //         data[i] = tmp;
-        //     }
-        // }
     }
 }
 
