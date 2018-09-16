@@ -107,3 +107,7 @@ install(TARGETS container_queue_test DESTINATION stl)
 
 add_executable(container_priority_queue_test container_priority_queue_test.cpp)
 install(TARGETS container_priority_queue_test DESTINATION stl)
+
+add_executable(iterator_front_insert_test iterator_front_insert_test.cpp)
+install(TARGETS iterator_front_insert_test DESTINATION stl)
+

@@ -1,6 +1,7 @@
 ﻿#include <algorithm>
 #include <iostream>
 #include <string.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -15,6 +16,6 @@ int main()
     const char *end1 = find_first_of(s1, s1 + strlen(s1), WS, WS + n_WS);
     const char *end2 = find_first_of(s2, s2 + strlen(s2), WS, WS + n_WS);
 
-    printf("First word of s1: %.*s\n", end1 - s1, s1);
-    printf("First word of s2: %.*s\n", end2 - s2, s2);
+    printf("First word of s1: %d.%s\n", end1 - s1, s1);
+    printf("First word of s2: %d.%s\n", end2 - s2, s2);
 }
